@@ -6,7 +6,7 @@ pipeline {
     }
     
     stages {
-        stage('stage1') {
+        stage('stagee1') {
             steps {
                 echo 'clone the project'
                 git branch: 'main', url: 'https://github.com/RBalaji123/htmlproject-balaji.git'
