@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "balaji"}
+    agent { label "project"}
 
     triggers {
         pollSCM('* * * * *')
@@ -22,7 +22,7 @@ pipeline {
               stage('stage3') {
             steps {
                 echo 'copy the file'
-                sh 'scp -i /home/ec2-user/devops.pem -r /var/jenkins/workspace/htmlproject-balaji/* ec2-user@3.26.209.33:/var/www/html'
+                sh 'scp -i /home/ec2-user/devops.pem -r /var/jenkins/workspace/httpd_project/* ec2-user@13.211.206.44:/var/www/html'
             }
         }
               stage('stage4') {
